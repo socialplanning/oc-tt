@@ -31,5 +31,7 @@ setup(name='oc-tt',
       # -*- Entry points: -*-
       [opencore.versions]
       oc-tt = opencore.tasktracker
+      [topp.zcmlloader]
+      opencore = opencore.tasktracker
       """,
       )
