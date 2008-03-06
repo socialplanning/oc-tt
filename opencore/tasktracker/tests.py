@@ -10,7 +10,7 @@ from zope.app.component.hooks import setSite
 from zope.interface import alsoProvides
 from zope.testing.cleanup import cleanUp
 from opencore.testing.layer import MockHTTPWithContent
-from opencore.testing.setup import base_tt_setup
+from opencore.tasktracker.testing.setup import base_tt_setup
 from Products.OpenPlans.tests.openplanstestcase import OpenPlansTestCase
 
 def clean_CA(tc):
