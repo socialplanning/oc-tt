@@ -1,5 +1,7 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
+   <include package="opencore.cabochon" />
+
    <adapter
       for="topp.featurelets.interfaces.IFeatureletSupporter"
       provides="topp.featurelets.interfaces.IFeaturelet"
