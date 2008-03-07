@@ -24,7 +24,7 @@ setup(name='oc-tt',
       namespace_packages=['opencore'],
       include_package_data=True,
       zip_safe=False,
-      dependency_links=[https://svn.openplans.org/svn/oc-cab/trunk#egg=oc-cab'],
+      dependency_links=['https://svn.openplans.org/svn/oc-cab/trunk#egg=oc-cab'],
       install_requires=[
           'setuptools',
           'oc-cab'
