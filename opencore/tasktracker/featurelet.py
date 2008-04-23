@@ -85,6 +85,3 @@ class TaskTrackerFeaturelet(BaseFeaturelet):
             raise AssertionError("Project initialization failed: status %d (maybe TaskTracker isn't running?)" % response.status)
         return BaseFeaturelet.deliverPackage(self, obj)
 
-    def removePackage(self, obj, raise_error=True):
-        # sending message to tasktracker happens through cabochonclient now
-        return
