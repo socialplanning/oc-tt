@@ -85,3 +85,17 @@ class TaskTrackerFeaturelet(BaseFeaturelet):
             raise AssertionError("Project initialization failed: status %d (maybe TaskTracker isn't running?)" % response.status)
         return BaseFeaturelet.deliverPackage(self, obj)
 
+    def removePackage(self, obj, raise_error=True):
+        if not self.active:
+            log.info("Failed to remove TaskTracker featurelet: no TT URI set.")
+            return
+
+        header = {'X-Openplans-Tasktracker-Initialized': 'True'}
+        response, content = self._makeHttpReqAsUser(self.destroy_uri, obj=obj, headers=header)
+        if response.status != 200:
+            if raise_error:
+                raise AssertionError("Error removing tasktracker featurelet: %s" % content)
+            else:
+                log.info('Error removing tasktracker featurelet: %s' % content)
+        return BaseFeaturelet.removePackage(self, obj)
+ 
