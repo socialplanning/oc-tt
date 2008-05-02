@@ -32,23 +32,6 @@ The response is set up to return status code 200::
     >>> content
     'Mock request succeeded!'
 
-We will simulate 'deliverPackage' and 'removePackage', the http calls
-to tasktracker::
-
-    >>> header = {"X-Tasktracker-Initialize":"True"}
-    >>> ttf._makeHttpReqAsUser(ttf.init_uri, obj=project, headers=header)
-    Called httplib2.Http.request(
-        'http://nohost:tasktracker/project/initialize/',
-        headers={'X-Openplans-Project': 'p1', 'Cookie': '__ac=...', 'X-Tasktracker-Initialize': 'True'},
-        method='POST')
-    (<...MockResponse object at ...>, 'Mock request succeeded!')
-    >>> ttf._makeHttpReqAsUser(ttf.uninit_uri, obj=project)
-    Called httplib2.Http.request(
-        'http://nohost:tasktracker/project/uninitialize/',
-        headers={'X-Openplans-Project': 'p1', 'Cookie': '__ac=...'},
-        method='POST')
-    (<...MockResponse object at ...>, 'Mock request succeeded!')
-
 Install a tasktracker featurelet
 ================================
 
@@ -66,7 +49,6 @@ Make sure we can install a TaskTracker featurelet too::
     >>> view.request.set('flet_recurse_flag', None)
     >>> view.request.form.update(form_vars)
     >>> view.handle_request()
-    Called ...
 
     >>> from opencore.project.utils import get_featurelets
     >>> get_featurelets(proj)
@@ -87,4 +69,4 @@ Gotta reinstall::
 
     >>> from topp.featurelets.interfaces import IFeatureletSupporter
     >>> IFeatureletSupporter(project).installFeaturelet(TaskTrackerFeaturelet(project))
-    Called...
+

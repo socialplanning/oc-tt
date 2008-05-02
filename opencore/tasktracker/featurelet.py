@@ -67,35 +67,3 @@ class TaskTrackerFeaturelet(BaseFeaturelet):
         headers['Cookie'] = auth.generateCookie(user_id)
         headers['X-Openplans-Project'] = obj.getId()
         return self.http.request(uri, method=method, headers=headers)
-
-    def deliverPackage(self, obj):
-        if not self.active:
-            # we don't have a TT URI set, don't do anything
-            log.info('Failed to add TaskTracker featurelet: no TT URI set')
-            return
-
-        #XXX: we send both headers for now so that TT and OC can be updated
-        #independently.  The first can be removed once TT is updated.
-        header = {"X-Tasktracker-Initialize":"True"}
-        header = {"X-Openplans-Tasktracker-Initialize":"True"}
-        response, content = self._makeHttpReqAsUser(self.init_uri, obj=obj,
-                                                    headers=header)
-
-        if response.status != 200:
-            raise AssertionError("Project initialization failed: status %d (maybe TaskTracker isn't running?)" % response.status)
-        return BaseFeaturelet.deliverPackage(self, obj)
-
-    def removePackage(self, obj, raise_error=True):
-        if not self.active:
-            log.info("Failed to remove TaskTracker featurelet: no TT URI set.")
-            return
-
-        header = {'X-Openplans-Tasktracker-Initialized': 'True'}
-        response, content = self._makeHttpReqAsUser(self.uninit_uri, obj=obj, headers=header)
-        if response.status != 200:
-            if raise_error:
-                raise AssertionError("Error removing tasktracker featurelet: %s" % content)
-            else:
-                log.info('Error removing tasktracker featurelet: %s' % content)
-        return BaseFeaturelet.removePackage(self, obj)
- 
