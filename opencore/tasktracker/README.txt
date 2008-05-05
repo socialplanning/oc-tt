@@ -5,9 +5,9 @@
 URI convenience api
 ===================
 
-    >>> from opencore.utils import get_opencore_property
-    >>> get_opencore_property('tasktracker_uri')
-    'http://nohost:tasktracker'
+    >>> from opencore.utility.interfaces import IProvideSiteConfig
+    >>> from zope.component import getUtility
+    >>> getUtility(IProvideSiteConfig)._set('http://nohost:tasktracker')
 
 featurelet install
 ==================
