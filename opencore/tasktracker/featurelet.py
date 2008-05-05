@@ -2,7 +2,7 @@ from Products.CMFCore.utils import getToolByName
 from opencore.interfaces import IProject
 from opencore.tasktracker.interfaces import ITaskTrackerFeatureletInstalled
 from opencore.utility.interfaces import IHTTPClient
-from opencore.utils import get_opencore_property
+from opencore.utility.interfaces import IProvideSiteConfig
 from plone.memoize.instance import memoizedproperty, memoize
 from topp.featurelets.base import BaseFeaturelet
 from topp.featurelets.interfaces import IFeaturelet
@@ -36,7 +36,7 @@ class TaskTrackerFeaturelet(BaseFeaturelet):
 
     @property
     def uri(self):
-        return get_opencore_property('tasktracker_uri')
+        return getUtility(IProvideSiteConfig).get('tasktracker uri')
 
     @property
     def active(self):
