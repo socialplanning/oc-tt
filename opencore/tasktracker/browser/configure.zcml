@@ -3,6 +3,13 @@
            xmlns:opencore="http://namespaces.openplans.org/opencore"
            >
 
+  <browser:page
+     class="opencore.browser.naming.ProjectDummy"
+     for="opencore.interfaces.IProject"
+     permission="zope2.View"
+     name="tasks"
+     />
+
   <opencore:menuitem
      name="Tasks"
      filter="opencore.browser.topnav.viewlet.contained_within"
