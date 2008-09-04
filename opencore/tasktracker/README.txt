@@ -9,6 +9,38 @@ URI convenience api
     >>> from zope.component import getUtility
     >>> getUtility(IProvideSiteConfig)._set('tasktracker uri', 'http://nohost:tasktracker')
 
+
+Dummy 'tasks' view
+==================
+
+A dummy view is registered at the URL used for a project's tasks, just
+to prevent people from accidentally creating pages at that URL. (See
+also in opencore: opencore/nui/setup.txt)
+
+    >>> project = self.portal.projects.p1
+    >>> from opencore.browser.naming import ProjectDummy
+    >>> view = project.restrictedTraverse('tasks')
+    >>> isinstance(view, ProjectDummy)
+    True
+
+This dummy view will block creating a page at that path::
+
+    >>> self.loginAsPortalOwner()
+    >>> id1 = project.invokeFactory('Document', 'tasks', title='Bad Path')
+    >>> import transaction
+    >>> sp = transaction.savepoint(optimistic=True)
+
+Let's make sure our content got renamed::
+
+    >>> from opencore.upgrades.utils import move_blocking_content
+    >>> move_blocking_content(self.portal)
+    >>> id1 in project.objectIds()
+    False
+    >>> '%s-page' % id1 in project.objectIds()
+    True
+
+
+
 featurelet install
 ==================
 
@@ -69,4 +101,3 @@ Gotta reinstall::
 
     >>> from topp.featurelets.interfaces import IFeatureletSupporter
     >>> IFeatureletSupporter(project).installFeaturelet(TaskTrackerFeaturelet(project))
-
