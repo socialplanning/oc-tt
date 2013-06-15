@@ -1,0 +1,31 @@
+# Gettext Message File to Português translation for opencore
+# Thiago Benicchio <thiago.wsf@gmail.com>, 2008.
+# Luiz Alves da Silva Junior  <lasjunior@petrobras.com.br>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: opencore\n"
+"POT-Creation-Date: 2013-06-06 05:28+0000\n"
+"PO-Revision-Date: 2010-12-07 10:41-0400\n"
+"Last-Translator: Luiz Alves da Silva Junior  <lasjunior@petrobras.com.br>\n"
+"Language-Team: OpenFSM Team <openfsm@lists.openfsm.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: pt\n"
+"Language-Name: Português\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: opencore\n"
+
+#: ../featurelet.py:27
+msgid "Task Tracker"
+msgstr ""
+
+#: ../featurelet.py:32
+msgid "Task tracker"
+msgstr ""
+
+#: ../featurelet.py:31
+msgid "Tasks"
+msgstr ""
+
