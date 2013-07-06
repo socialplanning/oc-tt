@@ -1,4 +1,5 @@
 from Products.CMFCore.utils import getToolByName
+from opencore.i18n import _
 from opencore.interfaces import IProject
 from opencore.tasktracker.interfaces import ITaskTrackerFeatureletInstalled
 from opencore.utility.interfaces import IHTTPClient
@@ -23,12 +24,12 @@ class TaskTrackerFeaturelet(BaseFeaturelet):
     implements(IFeaturelet)
 
     id = "tasks"
-    title = "Task Tracker"
+    title = _(u"Task Tracker")
     installed_marker = ITaskTrackerFeatureletInstalled
 
     _required_interfaces = BaseFeaturelet._required_interfaces + (IProject,)
-    _info = {'menu_items': ({'title': u'Tasks',
-                             'description': u'Task tracker',
+    _info = {'menu_items': ({'title': _(u'Tasks'),
+                             'description': _(u'Task tracker'),
                              'action': 'tasks'
                              },
                             ),

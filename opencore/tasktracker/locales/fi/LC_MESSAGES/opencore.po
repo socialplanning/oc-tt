@@ -1,0 +1,30 @@
+# translation of opencore.po to Suomeksi
+# Oscar Fresan Landibar <oscar.fresan@kaapeli.fi>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: opencore\n"
+"POT-Creation-Date: 2013-06-06 05:28+0000\n"
+"PO-Revision-Date: 2013-05-26 17:46-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: The Open Planning Project <opencore-dev@lists.openplans.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Code: fi\n"
+"Language-Name: Suomeksi\n"
+"Preferred-Encodings: latin9 utf-8\n"
+"Domain: opencore\n"
+
+#: ../featurelet.py:27
+msgid "Task Tracker"
+msgstr ""
+
+#: ../featurelet.py:32
+msgid "Task tracker"
+msgstr ""
+
+#: ../featurelet.py:31
+msgid "Tasks"
+msgstr ""
+

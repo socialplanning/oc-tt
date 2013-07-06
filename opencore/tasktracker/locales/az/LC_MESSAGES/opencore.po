@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: opencore\n"
+"POT-Creation-Date: 2013-06-06 05:28+0000\n"
+"PO-Revision-Date: 2007-11-08 16:24-0500\n"
+"Last-Translator: \n"
+"Language-Team: The Open Planning Project\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: az\n"
+"Language-Name: Azerbaijani\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: opencore\n"
+"X-Poedit-Language: Azerbaijani\n"
+"X-Poedit-Country: AZERBAIJAN\n"
+
+#: ../featurelet.py:27
+msgid "Task Tracker"
+msgstr ""
+
+#: ../featurelet.py:32
+msgid "Task tracker"
+msgstr ""
+
+#: ../featurelet.py:31
+msgid "Tasks"
+msgstr ""
+
