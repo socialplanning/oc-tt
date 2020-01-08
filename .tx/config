@@ -1,0 +1,10 @@
+[main]
+host = https://www.transifex.com
+
+[social-planning.opencore-tasktracker-pot]
+file_filter = opencore/tasktracker/locales/<lang>/LC_MESSAGES/opencore.po
+minimum_perc = 0
+source_file = opencore/tasktracker/locales/opencore.pot
+source_lang = en
+type = PO
+
