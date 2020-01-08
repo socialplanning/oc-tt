@@ -2,7 +2,7 @@ Changelog
 =========
 
 0.1.3-dev - (unreleased)
-----------------------
+------------------------
 
  * Added initial translations (gettext files). (macagua)
  * Added .gitignore file. (macagua)
