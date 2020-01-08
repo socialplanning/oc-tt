@@ -16,6 +16,9 @@ Key features include:
 - Provides support to Task Tracker via the 
   `TaskTracker <https://github.com/socialplanning/TaskTracker/>`_ package.
 
+- Provides support an event server with `Cabochon <https://www.coactivate.org/projects/cabochon/>`_ via the 
+  `CabochonClient <https://pypi.org/project/CabochonClient/>`_ package.
+
 
 Examples
 ========
