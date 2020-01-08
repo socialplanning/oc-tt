@@ -2,12 +2,13 @@ from setuptools import setup, find_packages
 
 version = '0.1.2'
 
+long_description = "Changes:\n\n%s" % open('CHANGES.txt').read()
+
 setup(name='oc-tt',
       version=version,
       description="OpenCore Software TaskTracker client package",
-      long_description="""\
-""",
-      # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
+      long_description=long_description,
+      # Get more strings from https://pypi.org/pypi?:action=list_classifiers
       classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Plugins",
