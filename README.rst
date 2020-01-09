@@ -2,7 +2,8 @@
 opencore.tasktracker
 ====================
 
-The `OpenCore Software <http://coactivate.org/projects/opencore>`_ TaskTracker client package.
+The `TaskTracker <https://github.com/socialplanning/TaskTracker/>`_ client package
+for `OpenCore Software <http://coactivate.org/projects/opencore>`_.
 
 
 Features
@@ -50,7 +51,7 @@ Contribute
 
 - Issue Tracker: https://github.com/socialplanning/oc-tt/issues
 - Source Code: https://github.com/socialplanning/oc-tt
-- Documentation: http://www.coactivate.org/projects/opencore/blog/
+- Documentation: https://www.coactivate.org/projects/opencore/
 - Translations: https://www.transifex.com/plone/social-planning/dashboard/
 
 
